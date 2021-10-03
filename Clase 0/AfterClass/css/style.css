@@ -10,3 +10,18 @@ body {
     background-color: #91c4ca;
     color:rgba(136, 14, 14, 0.767);
 }
+
+a:link {
+    font-size: 100%;
+    color:rgba(97, 26, 26, 0.87);
+  }
+
+  a:hover {
+    font-size:20px;
+    color:#ffffff;
+  }
+
+  a { 
+    color: rgba(136, 14, 14, 0.767);
+    text-decoration: none;
+}
