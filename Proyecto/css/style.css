@@ -21,3 +21,23 @@ h1{
 .social-media p{
     color: white;
 }
+
+.bmth-menu{
+    background-color: #0FFC90;
+}
+
+.last-album{
+    background-color: #FE4503;
+}
+
+.next-live {
+    background-color: #E6D402
+}
+
+.social-media{
+    background-color: black;
+}
+
+main{
+    background-color: black;
+}
