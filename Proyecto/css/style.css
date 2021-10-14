@@ -1,0 +1,23 @@
+h1{
+    color: white;
+}
+
+.bmth-menu nav a:link, a:visited, a:active{
+    text-decoration: None;
+    color: black;
+}
+
+.last-album td{
+    color: #E6D402;
+}
+
+.next-live h3{
+    color: #000000;
+}
+
+.suscribe-form {
+    color: #E6D402
+}
+.social-media p{
+    color: white;
+}
