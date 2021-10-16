@@ -1,43 +1,98 @@
-h1{
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+body{    
+    font-family: 'Architects Daughter';
+    background-color: black;
     color: white;
+    font-size: 1.6rem; 
 }
 
-.bmth-menu nav a:link, a:visited, a:active{
-    text-decoration: None;
-    color: black;
+a{
+    text-decoration: none;
+    color: black;    
 }
 
-.last-album td{
-    color: #E6D402;
+ul{
+    list-style: none;  
 }
 
-.next-live h3{
-    color: #000000;
-}
-
-.suscribe-form {
-    color: #E6D402
-}
-.social-media p{
-    color: white;
-}
-
+/*Header----------------------------*/
 .bmth-menu{
     background-color: #0FFC90;
 }
 
+.bmth-menu img{
+    width: 9rem;
+}
+
+/*Footer-----------------------*/
+
+.btn-suscribe{
+    font-size: 1.2rem;
+    background-color: #E6D402;
+    color: black;
+}
+
+.bmth-suscribe input{
+    font-size: 1.4rem;
+}
+
+.social-media img{
+    width: 3rem;
+    height: 3rem;;
+}
+
+.bmth-copyright{
+    font-size: .9rem;
+}
+
+/*Home------------------------------------------------------------------*/
+/*Cover page-----------------------*/
+.cover-page{
+    height: 60rem;
+    background-image: url(../media/images/bring-me-the-horizon.jpg);
+    background-repeat: no-repeat;
+}
+
+.cover-page h1{
+    color: #F114F7;
+    text-align: center;
+    font-size: 8rem;
+    line-height: 1.2;
+    padding-top: 20rem;    
+}
+
+/*Last album----------------------*/
 .last-album{
     background-color: #FE4503;
+    color: #E6D402;
 }
 
-.next-live {
-    background-color: #E6D402
+.last-album img{
+    width: 30rem;
 }
 
-.social-media{
-    background-color: black;
+.last-album h2{
+    text-align: center;
+}
+/*Next live---------------------*/
+.next-live a{
+    font-family: 'Architects Daughter', cursive;
+	background-color: #E6D402;
+	color: black;
+	font-weight: 700;
+	border: 1px;
+	text-decoration: none;
 }
 
-main{
-    background-color: black;
+
+/*News--------------------------*/
+.bmth-news{
+    background-color: #E6D402;
+    color: black;
+    text-justify: auto;
+}
+
+.bmth-news h2{
+    text-align: center;
 }
