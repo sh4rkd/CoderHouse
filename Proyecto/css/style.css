@@ -33,8 +33,12 @@ ul{
     color: black;
 }
 
-.bmth-suscribe input{
+.size-input input{
     font-size: 1.4rem;
+}
+
+.size-input textarea{
+    font-size: 1.44rem;
 }
 
 .social-media img{
@@ -55,11 +59,11 @@ ul{
 }
 
 .cover-page h1{
-    color: #F114F7;
-    text-align: center;
+    color: white;
+    text-align: left;
     font-size: 8rem;
-    line-height: 1.2;
-    padding-top: 20rem;    
+    line-height: 1.1;
+    padding-top: 3rem;    
 }
 
 /*Last album----------------------*/
@@ -68,20 +72,20 @@ ul{
     color: #E6D402;
 }
 
-.last-album img{
+.album-size img{
     width: 30rem;
 }
 
 .last-album h2{
     text-align: center;
 }
-/*Next live---------------------*/
-.next-live a{
+/*button for buys/change direction in dark fonts---------------------*/
+.btn-dark-font a{
     font-family: 'Architects Daughter', cursive;
 	background-color: #E6D402;
 	color: black;
 	font-weight: 700;
-	border: 1px;
+	border: 5px;
 	text-decoration: none;
 }
 
@@ -95,4 +99,18 @@ ul{
 
 .bmth-news h2{
     text-align: center;
+}
+
+.update-size img{
+    height: 30rem;
+}
+
+.text-decoration a{
+    text-decoration-color: #550606;
+    text-decoration-line:underline;
+}
+
+/*Contact us--------------------------*/
+.size-input img{
+    width: 40rem;
 }
