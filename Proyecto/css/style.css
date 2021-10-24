@@ -9,56 +9,69 @@ body{
 
 a{
     text-decoration: none;
-    color: black;    
+    color: black;
 }
 
 ul{
     list-style: none;  
 }
 
+.bmthMenu li {
+	display: inline-block;
+	width: 11%;
+	position: relative;
+	font-size: 30px;
+	color: black;
+}
+
+.bmthMenu ul li a:hover {
+	color: red;
+	padding: 0.1em;
+ }
+
 /*Header----------------------------*/
-.bmth-menu{
+.bmthMenu{
     background-color: #0FFC90;
 }
 
-.bmth-menu img{
+.bmthMenu img{
     width: 9rem;
 }
 
 /*Footer-----------------------*/
 
-.btn-suscribe{
+.btnSuscribe button{
     font-size: 1.2rem;
     background-color: #E6D402;
     color: black;
 }
 
-.size-input input{
+.sizeInput input{
     font-size: 1.4rem;
 }
 
-.size-input textarea{
+.sizeInput textarea{
     font-size: 1.44rem;
 }
 
-.social-media img{
+.socialMedia img{
     width: 3rem;
     height: 3rem;;
 }
 
-.bmth-copyright{
+.bmthCopyright{
     font-size: .9rem;
 }
 
 /*Home------------------------------------------------------------------*/
 /*Cover page-----------------------*/
-.cover-page{
+.coverPage{
     height: 60rem;
     background-image: url(../media/images/bring-me-the-horizon.jpg);
     background-repeat: no-repeat;
 }
 
-.cover-page h1{
+.coverPage h1{
     color: white;
     text-align: left;
     font-size: 8rem;
@@ -67,50 +80,66 @@ ul{
 }
 
 /*Last album----------------------*/
-.last-album{
+.lastAlbum{
     background-color: #FE4503;
     color: #E6D402;
 }
 
-.album-size img{
+.albumSize img{
     width: 30rem;
 }
 
-.last-album h2{
-    text-align: center;
-}
 /*button for buys/change direction in dark fonts---------------------*/
-.btn-dark-font a{
+.btnDarkFont a{
     font-family: 'Architects Daughter', cursive;
 	background-color: #E6D402;
 	color: black;
 	font-weight: 700;
 	border: 5px;
 	text-decoration: none;
+    padding: .4rem;
+    margin: .7rem;
+    border-radius: .5em;
 }
 
+.btnDarkFont a:hover{
+    font-family: 'Architects Daughter', cursive;
+	background-color: white;
+	color: black;
+	font-weight: 700;
+	border: 5px;
+	text-decoration: none;
+    padding: .8rem;
+    margin: .8rem;
+    border-radius: .5em;
+}
 
 /*News--------------------------*/
-.bmth-news{
+.bmthNews{
     background-color: #E6D402;
     color: black;
     text-justify: auto;
 }
 
-.bmth-news h2{
-    text-align: center;
-}
-
-.update-size img{
+.updateSize img{
     height: 30rem;
 }
 
-.text-decoration a{
+.textDecoration a{
     text-decoration-color: #550606;
-    text-decoration-line:underline;
+    text-decoration-line: underline;
+    padding: .4rem;
+    margin: .7rem;
+}
+
+.textDecoration a:hover{
+    color: white;
+    text-decoration-color: white;
+    text-decoration-line: underline;
+    font-size: 2rem;
 }
 
 /*Contact us--------------------------*/
-.size-input img{
+.sizeInput img{
     width: 40rem;
 }
