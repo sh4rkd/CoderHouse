@@ -17,8 +17,8 @@ ul{
 }
 
 .bmthMenu li {
+    margin-right: 2rem;
 	display: inline-block;
-	width: 11%;
 	position: relative;
 	font-size: 30px;
 	color: black;
@@ -26,13 +26,17 @@ ul{
 
 .bmthMenu ul li a:hover {
 	color: red;
-	padding: 0.1em;
+    font-size: 2rem;
+    text-decoration-line: underline;
  }
 
 /*Header----------------------------*/
 .bmthMenu{
     background-color: #0FFC90;
     padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .bmthMenu img{
@@ -94,7 +98,11 @@ ul{
 /*button for buys/change direction in dark fonts---------------------*/
 .btnDarkFont{
     padding: 2rem;
-    margin: 2rem 0;
+    margin: 1rem 30rem;
+    border: 1px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    flex-flow: column;
 }
 
 .btnDarkFont a{
@@ -162,4 +170,10 @@ ul{
 
 .bmthCopyright{
     padding: 2rem;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
