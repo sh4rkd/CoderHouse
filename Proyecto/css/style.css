@@ -32,6 +32,7 @@ ul{
 /*Header----------------------------*/
 .bmthMenu{
     background-color: #0FFC90;
+    padding: 0 1rem;
 }
 
 .bmthMenu img{
@@ -81,6 +82,7 @@ ul{
 
 /*Last album----------------------*/
 .lastAlbum{
+    padding: 2rem;
     background-color: #FE4503;
     color: #E6D402;
 }
@@ -90,6 +92,11 @@ ul{
 }
 
 /*button for buys/change direction in dark fonts---------------------*/
+.btnDarkFont{
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
 .btnDarkFont a{
     font-family: 'Architects Daughter', cursive;
 	background-color: #E6D402;
@@ -116,6 +123,7 @@ ul{
 
 /*News--------------------------*/
 .bmthNews{
+    padding: 2rem;
     background-color: #E6D402;
     color: black;
     text-justify: auto;
@@ -142,4 +150,16 @@ ul{
 /*Contact us--------------------------*/
 .sizeInput img{
     width: 40rem;
+}
+
+.sizeInput{
+    padding: 2rem;
+}
+
+.socialMedia{
+    padding: 2rem;
+}
+
+.bmthCopyright{
+    padding: 2rem;
 }
