@@ -1,0 +1,136 @@
+/*https://docs.google.com/presentation/d/15tHQBNw1AIONyJfeeIcHdWPFvbtEHKpbj33I78S0W8Q/edit#slide=id.g6bd7f22dda_0_300*/
+/*Mobile first*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Para que respete siempre el ancho maximo de caja que le indique*/
+}
+
+/*---- HEADER ----*/
+header {
+    background-color: #141a32;
+    display: flex;
+    flex-direction: column;
+}
+
+header a{
+    width: 270px;
+    margin: 20px auto;
+}
+
+header img{
+    width: 270px;
+}
+
+/*CSS diapo Box Modeling*/
+ul {
+    list-style: none;
+    font-size:0 /* truco por el uso de inline-block*/
+}
+
+li {
+    display: inline-block;
+    width: 25%;
+    position:relative;
+    font-size: 14px
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+}
+
+ul li:hover ul {
+    display:block;
+}
+
+nav{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+nav a{
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/*---- MAIN ----*/
+.mainIndex{
+    background-color: #F0BD35;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainIndex section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainIndex h2{
+    color: #FA7E37;
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin: 15px;
+}
+
+.mainIndex article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainIndex h3{
+    color:#E33D67;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.mainIndex img{
+    padding: 10px 20px;
+}
+
+/*---- FOOTER ----*/
+footer{
+
+    background-color: #141A32;
+    color: white;
+    text-align: center;
+    font-size: .8rem;
+    padding: 20px;
+}
+
+/* Responsive */
+/* Dispositivo mediano */
+
+@media (min-width: 768px){
+    li{
+        font-size: 25px;
+    }
+
+    nav{
+        margin-left: 40px;
+    }
+}
+
+/* Dispositivo grande */
+@media (min-width: 1024px){
+    nav a{
+        color: #FA7D37;
+    }
+
+    nav a:hover{
+        color: #E33D67;
+    }
+}
+
+/*Mobile last*/
+/*se empieza de arriba abajo el siguiente @media debe ser max 768 luego @ media 320*/
