@@ -1,179 +1,225 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-
-body{    
-    font-family: 'Architects Daughter';
-    background-color: black;
-    color: white;
-    font-size: 1.6rem; 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-ul{
-    list-style: none;  
+:root {
+    --clr-pink: #E6CFE6;
+    --clr-light-yellow: #D7E6CF;
+	--clr-yellow: #E0FF00;
+    --clr-light-pink: #E6E6E6;
+    --clr-light-green: #CFE6E2;
+    --clr-primary: #0E0E0E;
 }
 
-.bmthMenu li {
-    margin-right: 2rem;
+/*---- Header ----*/
+header {
+    grid-area: "header";
+    background-color: var(--clr-light-yellow);
+    display: flex;
+    flex-direction: column;
+}
+
+header a{
+    text-align: center;
+}
+
+header img{
+    width: 270px;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 0;
+}
+
+nav li {
+    margin-right: .5rem;
 	display: inline-block;
 	position: relative;
-	font-size: 30px;
+	font-size: 16px;
 	color: black;
 }
 
-.bmthMenu ul li a:hover {
-	color: red;
-    font-size: 2rem;
-    text-decoration-line: underline;
- }
+nav{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
-/*Header----------------------------*/
-.bmthMenu{
-    background-color: #0FFC90;
-    padding: 0 1rem;
+nav a{
+    color: var(--clr-primary);
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/*---- Main ----*/
+.bmthMain{
+    background-color: var(--clr-primary); 
+    display: grid;
+    grid-template-areas:"header"
+                        "lastAlbum"
+                        "nextLive"
+                        "news"
+                        "footer";
+}
+
+.bmthMain section{    
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-.bmthMenu img{
-    width: 9rem;
-}
-
-/*Footer-----------------------*/
-
-.btnSuscribe button{
-    font-size: 1.2rem;
-    background-color: #E6D402;
-    color: black;
-}
-
-.sizeInput input{
-    font-size: 1.4rem;
-}
-
-.sizeInput textarea{
-    font-size: 1.44rem;
-}
-
-.socialMedia img{
-    width: 3rem;
-    height: 3rem;;
-}
-
-.bmthCopyright{
-    font-size: .9rem;
-}
-
-/*Home------------------------------------------------------------------*/
-/*Cover page-----------------------*/
-.coverPage{
-    height: 60rem;
-    background-image: url(../media/images/bring-me-the-horizon.jpg);
-    background-repeat: no-repeat;
-}
-
-.coverPage h1{
-    color: white;
-    text-align: left;
-    font-size: 8rem;
-    line-height: 1.1;
-    padding-top: 3rem;    
-}
-
-/*Last album----------------------*/
-.lastAlbum{
-    padding: 2rem;
-    background-color: #FE4503;
-    color: #E6D402;
-}
-
-.albumSize img{
-    width: 30rem;
-}
-
-/*button for buys/change direction in dark fonts---------------------*/
-.btnDarkFont{
-    padding: 2rem;
-    margin: 1rem 30rem;
-    border: 1px solid black;
-    display:flex;
-    flex-wrap: wrap;
-    flex-flow: column;
-}
-
-.btnDarkFont a{
-    font-family: 'Architects Daughter', cursive;
-	background-color: #E6D402;
-	color: black;
-	font-weight: 700;
-	border: 5px;
-	text-decoration: none;
-    padding: .4rem;
-    margin: .7rem;
-    border-radius: .5em;
-}
-
-.btnDarkFont a:hover{
-    font-family: 'Architects Daughter', cursive;
-	background-color: white;
-	color: black;
-	font-weight: 700;
-	border: 5px;
-	text-decoration: none;
-    padding: .8rem;
-    margin: .8rem;
-    border-radius: .5em;
-}
-
-/*News--------------------------*/
-.bmthNews{
-    padding: 2rem;
-    background-color: #E6D402;
-    color: black;
-    text-justify: auto;
-}
-
-.updateSize img{
-    height: 30rem;
-}
-
-.textDecoration a{
-    text-decoration-color: #550606;
-    text-decoration-line: underline;
-    padding: .4rem;
-    margin: .7rem;
-}
-
-.textDecoration a:hover{
-    color: white;
-    text-decoration-color: white;
-    text-decoration-line: underline;
+.bmthMain h1{
+    color: var(--clr-pink);
     font-size: 2rem;
+    font-family: sans-serif;
+    margin: 15px;
+    margin-top: 25px;
+    display: none;  
 }
 
-/*Contact us--------------------------*/
-.sizeInput img{
-    width: 40rem;
+.bmthMain h2{
+    color: var(--clr-light-pink);
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin: 15px;
 }
 
-.sizeInput{
-    padding: 2rem;
+.bmthMain h3{
+    color: var(--clr-light-yellow);
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-.socialMedia{
-    padding: 2rem;
+.bmthMain p{
+    color: var(--clr-light-green);
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-.bmthCopyright{
-    padding: 2rem;
+.bmthMain li{    
+    color: var(--clr-light-green);
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-.footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.bmthMain img{
+    width: 300px;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+	background-color: var(--clr-yellow);
+	color: var(--clr-primary);
+	font-weight: 620;
+	border: none;
+    width: 25vh;
+    border-radius: 1rem;
+	text-decoration: none;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/*---- Footer ----*/
+
+footer{
+    grid-area: "footer";
+    background-color: var(--clr-light-green);
+    color: var(--clr-primary);
+    text-align: center;
+    font-size: .8rem;
+    padding: 20px;
+}
+
+footer section{
+    margin-bottom: 20px;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}
+
+/*Grid*/
+.grid{
+
+}
+
+.header{
+    grid-area: "header";
+}
+
+.lastAlbum{
+    grid-area: "lastAlbum";
+}
+
+.nextLive{
+    grid-area: "nextLive";
+}
+
+.news{
+    grid-area: "news";
+}
+
+.bmthCover{
+    grid-area: "bmthCover";
+}
+
+/*Responsive*/
+/*Medio*/
+@media (min-width: 768px){    
+    header{
+        padding: 0 .3rem;
+        flex-direction: inherit;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header li{
+            margin-right: 1.95rem;
+            font-size: 20px;      
+    }
+
+    header img{
+        width: 9rem;
+    }
+
+    .bmthMain img{
+        width: 500px;
+    }
+}
+
+@media (min-width: 1024px){
+    .bmthMain h1{
+        display: inherit;
+        color: white;
+        text-align: left;
+        font-size: 8rem;
+        line-height: 1.1;
+        padding-top: 3rem;   
+    }
+
+    .bmthCover{
+        grid-column-start: bmthCover;
+        grid-column-end: bmthCover;
+        height: calc(100vh - 98px);
+        background: url("../media/images/bring-me-the-horizon.jpg") no-repeat center/cover;
+    }
+
+
+
+    .bmthMain{
+        display: grid;
+        grid-template-areas:"header header header"
+                            "bmthCover bmthCover bmthCover"
+                            "lastAlbum nextLive news"
+                            "lastAlbum nextLive news"
+                            "footer footer footer";
+    }
 }
