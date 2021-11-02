@@ -1,7 +1,14 @@
+/*---- IMPORTS-FONTS ----*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Space+Mono&display=swap');
+
+/*---- RESET ----*/
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    color: inherit;
+    list-style: none;
+    box-sizing:border-box;
+    text-decoration: none;    
 }
 
 img {
@@ -9,6 +16,7 @@ img {
     height: auto;
 }
 
+/*---- COLORS ----*/
 :root {
     --clr-pink: #E6CFE6;
     --clr-light-yellow: #D7E6CF;
@@ -16,12 +24,84 @@ img {
     --clr-light-pink: #E6E6E6;
     --clr-light-green: #CFE6E2;
     --clr-primary: #0E0E0E;
+    --font-heading: 'Nanum Gothic Coding', monospace;
+    --font-body: 'Space Mono', monospace;
 }
 
-/*---- Header ----*/
+/*---- TEXT ----*/
+h1,h2,h3{
+    font-family: var(--font-heading);
+}
+
+h1{
+    font-size: 2.25rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p,
+a,
+input,
+select,
+textarea,
+button{
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+/*---- COMPONENTS ----*/
+.btn{
+    display: inline-block;
+    padding: .2em .5em;
+    border-radius: 2em;
+    cursor: pointer;
+    letter-spacing: .2em;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-line{
+    color: var(--clr-yellow);
+    background: transparent;
+    text-decoration-line: underline;
+}
+
+.btn-primary{
+    color: var(--clr-primary);
+    background: var(--clr-yellow);
+    font-weight: 700;
+}
+
+/*---- Utilities ----*/
+.pd-x2{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.pd-y2{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.hidden{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+/*---- Header&Footer ----*/
 header {
-    grid-area: "header";
-    background-color: var(--clr-light-yellow);
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%);
     display: flex;
     flex-direction: column;
 }
@@ -44,7 +124,7 @@ nav li {
 	display: inline-block;
 	position: relative;
 	font-size: 16px;
-	color: black;
+	color: var(--clr-primary);
 }
 
 nav{
@@ -59,79 +139,9 @@ nav a{
     text-decoration: none;
 }
 
-/*---- Main ----*/
-.bmthMain{
-    background-color: var(--clr-primary); 
-    display: grid;
-    grid-template-areas:"header"
-                        "lastAlbum"
-                        "nextLive"
-                        "news"
-                        "footer";
-}
-
-.bmthMain section{    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bmthMain h1{
-    color: var(--clr-pink);
-    font-size: 2rem;
-    font-family: sans-serif;
-    margin: 15px;
-    margin-top: 25px;
-    display: none;  
-}
-
-.bmthMain h2{
-    color: var(--clr-light-pink);
-    font-size: 2rem;
-    font-family: sans-serif;
-    margin: 15px;
-}
-
-.bmthMain h3{
-    color: var(--clr-light-yellow);
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.bmthMain p{
-    color: var(--clr-light-green);
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.bmthMain li{    
-    color: var(--clr-light-green);
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.bmthMain img{
-    width: 300px;
-    padding: 10px 20px;
-}
-
-.btn-primary {
-	background-color: var(--clr-yellow);
-	color: var(--clr-primary);
-	font-weight: 620;
-	border: none;
-    width: 25vh;
-    border-radius: 1rem;
-	text-decoration: none;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-/*---- Footer ----*/
-
 footer{
-    grid-area: "footer";
-    background-color: var(--clr-light-green);
-    color: var(--clr-primary);
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    color: var(--clr-light-pink);
     text-align: center;
     font-size: .8rem;
     padding: 20px;
@@ -146,34 +156,39 @@ footer img{
     height: 40px;
 }
 
-/*Grid*/
-.grid{
-
+/*Main*/
+body{
+    background-color: var(--clr-primary);
+    color: var(--clr-pink);
+    text-align: center;
 }
 
-.header{
-    grid-area: "header";
+
+.end-section{
+    border-bottom: 1px solid var(--clr-yellow);
+    margin-bottom: 2rem;
 }
 
-.lastAlbum{
-    grid-area: "lastAlbum";
+h1{
+    display: none;
 }
 
-.nextLive{
-    grid-area: "nextLive";
+img{
+    width: 400px;
 }
 
-.news{
-    grid-area: "news";
+.active-selection{
+    color: var(--clr-yellow);
 }
 
-.bmthCover{
-    grid-area: "bmthCover";
-}
+/*---- Grids ----*/
+.news { grid-area: news; }
+.last-album { grid-area: last-album; }
+.next-live { grid-area: next-live; }
+.bmth-cover { grid-area: bmth-cover; }
 
-/*Responsive*/
-/*Medio*/
-@media (min-width: 768px){    
+/*---- Responsive ----*/
+@media (min-width: 580px){    
     header{
         padding: 0 .3rem;
         flex-direction: inherit;
@@ -189,37 +204,47 @@ footer img{
     header img{
         width: 9rem;
     }
-
-    .bmthMain img{
-        width: 500px;
-    }
 }
 
 @media (min-width: 1024px){
-    .bmthMain h1{
-        display: inherit;
-        color: white;
-        text-align: left;
-        font-size: 8rem;
-        line-height: 1.1;
-        padding-top: 3rem;   
-    }
-
-    .bmthCover{
-        grid-column-start: bmthCover;
-        grid-column-end: bmthCover;
+    .bmth-cover{
         height: calc(100vh - 98px);
         background: url("../media/images/bring-me-the-horizon.jpg") no-repeat center/cover;
     }
 
+    .bmth-cover h1{
+        display: flex;
+        color: white;
+        font-size: 8rem;
+        line-height: 1.1;
+        padding-top: 3rem;   
+        width: 47rem;
+        text-shadow: 0.1em 0.1em 0.2em black;
+    }
 
+    .bmth-main section{    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }  
 
-    .bmthMain{
+    .container {
         display: grid;
-        grid-template-areas:"header header header"
-                            "bmthCover bmthCover bmthCover"
-                            "lastAlbum nextLive news"
-                            "lastAlbum nextLive news"
-                            "footer footer footer";
+        grid-template-columns: 1fr 0.4fr 1.6fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:"bmth-cover bmth-cover bmth-cover"
+                            "last-album last-album next-live"
+                            "news news news";
+    }
+
+    .center-text{
+        margin: 0 530px;
+    }
+
+    .bmth-main h2,.bmth-main h3{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 }
