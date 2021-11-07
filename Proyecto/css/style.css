@@ -24,6 +24,7 @@ img {
     --clr-light-pink: #E6E6E6;
     --clr-light-green: #CFE6E2;
     --clr-primary: #0E0E0E;
+    --clr-light-blue: #0093E9;
     --font-heading: 'Nanum Gothic Coding', monospace;
     --font-body: 'Space Mono', monospace;
 }
@@ -99,7 +100,14 @@ button{
 }
 
 /*---- Header&Footer ----*/
-header {
+header nav{
+    background-color: var(--clr-light-blue);
+}
+
+header nav a{
+    font-size: 1em;
+}
+/*header {
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%);
     display: flex;
@@ -138,7 +146,7 @@ nav a{
     font-family: sans-serif;
     text-decoration: none;
 }
-
+*/
 footer{
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     color: var(--clr-light-pink);
@@ -208,8 +216,9 @@ img{
 
 @media (min-width: 1024px){
     .bmth-cover{
-        height: calc(100vh - 98px);
+        height: calc(100vh);
         background: url("../media/images/bring-me-the-horizon.jpg") no-repeat center/cover;
+        margin-top: 7rem;
     }
 
     .bmth-cover h1{
