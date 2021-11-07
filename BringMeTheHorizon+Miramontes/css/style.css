@@ -107,6 +107,11 @@ header nav{
 header nav a{
     font-size: 1em;
 }
+
+header nav img{
+    width: 5rem;
+}
+
 /*header {
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%);
@@ -196,6 +201,12 @@ img{
 .bmth-cover { grid-area: bmth-cover; }
 
 /*---- Responsive ----*/
+@media (min-width:425px){
+    header nav img{
+        width: 8rem;
+    }
+}
+
 @media (min-width: 580px){    
     header{
         padding: 0 .3rem;
