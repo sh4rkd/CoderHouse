@@ -7,28 +7,28 @@
 @import "responsive";
 
 header{
-    nav{
+    .nav{
         background-color: $clr-light-blue;
         background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%);
-        a{
+        &__text{
             font-size: 1em;
         }
-        img{
+        &__image{
             width: 5rem;
         }
     }
 }
 
-footer{
+.foot{
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     color: $clr-light-pink;
     text-align: center;
     font-size: .8rem;
     padding: 20px;
-    section{
+    &__position{
         margin-bottom: 20px;
     }
-    img{
+    &__image{
         width: 40px;
         height: 40px;
     }

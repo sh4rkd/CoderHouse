@@ -27,11 +27,11 @@
 }
 
 @media (min-width: 1024px){
-    .bmth-cover{
+    .hero{
         height: calc(100vh);
         background: url("../media/images/bring-me-the-horizon.jpg") no-repeat center/cover;
         margin-top: 7rem;
-        h1{
+        &__title{
             display: flex;
             color: white;
             font-size: 8rem;
@@ -41,14 +41,6 @@
             text-shadow: 0.1em 0.1em 0.2em black;
         }
     }
-
-
-
-    .bmth-main section{    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }  
 
     .container {
         display: grid;
@@ -65,10 +57,15 @@
         margin: 0 530px;
     }
 
-    .bmth-main{
-        h2,h3{
+    .content{
+        &__text{
             margin-bottom: 2rem;
             margin-top: 2rem;
         }
+        &__position{    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }  
     }
 }

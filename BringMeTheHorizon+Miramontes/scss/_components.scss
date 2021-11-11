@@ -8,16 +8,19 @@
     letter-spacing: .2em;
     margin-bottom: 1rem;
     margin-top: 1rem;
+
+    &__primary{
+        color: $clr-primary;
+        background: $clr-yellow;
+        font-weight: 700;
+    }   
+    
+    &__line{
+        color: $clr-yellow;
+        background: transparent;
+        text-decoration-line: underline;
+    }
 }
 
-.btn-line{
-    color: $clr-yellow;
-    background: transparent;
-    text-decoration-line: underline;
-}
 
-.btn-primary{
-    color: $clr-primary;
-    background: $clr-yellow;
-    font-weight: 700;
-}
+
