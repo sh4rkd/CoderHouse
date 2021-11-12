@@ -124,12 +124,21 @@ button {
     flex-direction: column;
     align-items: center; } }
 
-header .nav {
+.contact__image {
+  margin-top: 5rem;
+  margin-bottom: 1rem; }
+
+.contact__content--box {
+  width: 20rem;
+  margin-bottom: 1rem;
+  text-align: center; }
+
+.nav {
   background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%); }
-  header .nav__text {
+  .nav__text {
     font-size: 1em; }
-  header .nav__image {
+  .nav__image {
     width: 5rem; }
 
 .foot {
@@ -149,9 +158,12 @@ body {
   color: #E6CFE6;
   text-align: center; }
 
-.end-section {
-  border-bottom: 1px solid #E0FF00;
+.end__line {
   margin-bottom: 2rem; }
+  .end__line--yellow {
+    border-bottom: 1px solid #E0FF00; }
+  .end__line--pink {
+    border-bottom: 1px solid #E6CFE6; }
 
 h1 {
   display: none; }
@@ -161,3 +173,7 @@ img {
 
 .active-selection {
   color: #E0FF00; }
+
+.album__playlist--hit {
+  color: #E0FF00;
+  list-style-image: url("https://api.iconify.design/emojione/glowing-star.svg"); }

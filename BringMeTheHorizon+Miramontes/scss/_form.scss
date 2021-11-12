@@ -1,0 +1,14 @@
+.contact{
+    &__image{
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__content{
+        &--box{
+            width: 20rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    }
+}

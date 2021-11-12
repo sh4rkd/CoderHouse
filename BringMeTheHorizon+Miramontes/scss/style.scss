@@ -5,9 +5,9 @@
 @import "texts";
 @import "utilities";
 @import "responsive";
+@import "form";
 
-header{
-    .nav{
+.nav{
         background-color: $clr-light-blue;
         background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%);
         &__text{
@@ -16,7 +16,6 @@ header{
         &__image{
             width: 5rem;
         }
-    }
 }
 
 .foot{
@@ -40,9 +39,16 @@ body{
     text-align: center;
 }
 
-.end-section{
-    border-bottom: 1px solid $clr-yellow;
-    margin-bottom: 2rem;
+.end{
+    &__line{
+        margin-bottom: 2rem;
+        &--yellow{
+            border-bottom: 1px solid $clr-yellow;
+        } 
+        &--pink{
+            border-bottom: 1px solid $clr-pink;
+        } 
+    }
 }
 
 h1{
@@ -55,4 +61,13 @@ img{
 
 .active-selection{
     color: $clr-yellow;
+}
+
+.album{
+    &__playlist{
+        &--hit{
+            color: $clr-yellow;
+            list-style-image: url('https://api.iconify.design/emojione/glowing-star.svg');
+        }
+    }
 }

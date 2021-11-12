@@ -1,0 +1,171 @@
+/* Operaciones */
+$ancho: 720px;
+$blue: blue;
+$green: green;
+$espaciado: 5px;
+$espaciado2: 10px;
+
+.box_uno {
+    background-color: $blue;
+    width: $ancho/2;
+    padding: $espaciado + $espaciado2;
+}
+
+.box_dos {
+    $espaciado2: 10px;
+    background-color: $green;
+    width: ($ancho/2)-50;
+    padding: ($espaciado * 2) + $espaciado2;
+}
+
+/* Condicionales */
+$animal: gato;
+$temperatura: 50;
+$mostrar: false;
+
+p {
+    @if $animal == gato {
+        color: blue;
+    } @else if $animal == perro {
+        color: red;
+    } @else if $animal == caballo {
+        color: green;
+    } @else {
+        color: black;
+    }
+}
+/*
+p {
+    @if $temperatura < 40 {
+        color: yellow;
+    } @else if $temperatura < 60 {
+        color: orange;
+    } @else if ($temperatura <= 100) {
+        color: red;
+    } @else {
+        color: black;
+    }
+}*/
+
+.contenido3 {
+    @if $mostrar {
+        border: 1px dashed red;
+    }
+}
+
+/* Bucles */
+$i: 1;
+@for $i from 1 through 3 {
+    .casitodos-#{$i} {
+        background-color: lightgray;
+        width: 100px * $i;
+    }
+}
+/*
+$vueltas: 6;
+@for $i from 1 through $vueltas {
+    .casitodos-#{$i} {
+        background-color: lightgray;
+        width: 100px * $i;
+    }
+}*/
+
+/* Each */
+$dimension: 320px;
+@each $animal in puma, tigre, pantera {
+    .#{$animal}-fondo {
+        width: $dimension * 2;
+        height: $dimension;
+        background-image: url("../images/#{$animal}.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+/*
+$lista: puma, tigre, pantera;
+@each $animal in $lista {
+    .#{$animal}-fondo {
+        width: $dimension * 2;
+        height: $dimension;
+        background-image: url("../images/#{$animal}.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}*/
+
+
+/* Maps */
+$redes:(twitter:#55acee, facebook:#3a5795, sendmail:#c25E30);
+$colores:(color1:#333333, color2:#666666, color3:#999999);
+
+@each $clave, $valor in $redes {
+    .btn-#{$clave} {
+        background-color:$valor;
+    }
+}
+
+@each $clave2, $valor2 in $colores {
+    .#{$clave2} {
+        color:$valor2;
+    }
+}
+
+
+/* Extend */
+.red_social {
+    border: 1px solid #333333;
+    background-color:#CCCCCC;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.red_social--nueva {
+    @extend .red_social;
+    border-width: 3px;
+}
+
+.caja {
+    color: #333333;
+    background-color: lightblue;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.borde {
+    border:2px dotted #666666;
+}
+
+.mi_estilo {
+    @extend .caja;
+    @extend .borde;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+}
+
+.ejemplo1, .ejemplo2 {
+    color:#c25E30;
+    background-color: aquamarine;
+    font-size:40px;
+  }
+
+/* Mixins */
+@mixin sizes($width, $height, $tamano_fuente, $color_fuente, $color_fondo) {
+    width: $width;
+    height: $height;
+    font-size: $tamano_fuente;
+    color: $color_fuente;
+    background-color: $color_fondo;
+}
+
+.espacio {
+    @extend .ejemplo1;
+    padding: $espaciado;
+}
+
+.box {
+    @extend .espacio;
+    @include sizes(200px, 10px, 22px, green, brown);
+}
