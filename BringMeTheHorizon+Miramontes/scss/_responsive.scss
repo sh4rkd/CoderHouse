@@ -31,7 +31,7 @@
         height: calc(100vh);
         background: url("../media/images/bring-me-the-horizon.jpg") no-repeat center/cover;
         margin-top: 7rem;
-        &__title{
+        &-title{
             display: flex;
             color: white;
             font-size: 8rem;
@@ -57,15 +57,13 @@
         margin: 0 530px;
     }
 
-    .content{
-        &__text{
-            margin-bottom: 2rem;
-            margin-top: 2rem;
-        }
-        &__position{    
+    main{
+        section{    
             display: flex;
             flex-direction: column;
             align-items: center;
-        }  
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
     }
 }

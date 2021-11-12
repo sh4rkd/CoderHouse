@@ -9,13 +9,13 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
 
-    &__primary{
+    &-primary{
         color: $clr-primary;
         background: $clr-yellow;
         font-weight: 700;
     }   
     
-    &__line{
+    &-line{
         color: $clr-yellow;
         background: transparent;
         text-decoration-line: underline;

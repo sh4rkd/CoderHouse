@@ -7,27 +7,27 @@
 @import "responsive";
 @import "form";
 
-.nav{
+nav{
         background-color: $clr-light-blue;
         background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%);
-        &__text{
+        a{
             font-size: 1em;
         }
-        &__image{
+        img{
             width: 5rem;
         }
 }
 
-.foot{
+footer{
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     color: $clr-light-pink;
     text-align: center;
     font-size: .8rem;
     padding: 20px;
-    &__position{
+    section{
         margin-bottom: 20px;
     }
-    &__image{
+    img{
         width: 40px;
         height: 40px;
     }
@@ -40,15 +40,14 @@ body{
 }
 
 .end{
-    &__line{
+        margin-top: 2rem;
         margin-bottom: 2rem;
-        &--yellow{
+        &-yellow{
             border-bottom: 1px solid $clr-yellow;
         } 
-        &--pink{
+        &-pink{
             border-bottom: 1px solid $clr-pink;
-        } 
-    }
+        }
 }
 
 h1{
@@ -64,10 +63,8 @@ img{
 }
 
 .album{
-    &__playlist{
-        &--hit{
-            color: $clr-yellow;
-            list-style-image: url('https://api.iconify.design/emojione/glowing-star.svg');
-        }
+    &-hit{
+        color: $clr-yellow;
+        list-style-image: url('https://api.iconify.design/emojione/glowing-star.svg');
     }
 }
