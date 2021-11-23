@@ -1,0 +1,42 @@
+/* diseño de pagina de live*/
+
+/* se especifica que solo afectara al main de la pagina live o haria interferencia con el del index*/
+main.live {
+	display: grid;
+	place-content: center;
+}
+
+.tour-dates {
+	padding: 3em 0;
+
+	ul {
+		max-width: 1200px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		gap: 1em;
+
+		li {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-between;
+			gap: 0.5em;
+
+			width: 250px;
+			min-height: 250px;
+			padding: 0 2em;
+			border: .5px solid $clr-pink;
+			h2,
+			p {
+				margin: unset;
+			}
+
+			h2 {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+}

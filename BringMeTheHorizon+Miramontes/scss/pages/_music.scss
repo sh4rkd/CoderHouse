@@ -1,0 +1,19 @@
+/* diseño de pagina de music */
+
+#carouselExampleFade{
+        img{
+                width: 400px;
+                margin-top: 0;
+                padding-top: unset;
+        }
+        &h2{
+                padding-bottom: unset;
+                max-width: 380px;
+                border-bottom: 1px solid $clr-yellow;
+                border-left: 1px solid $clr-pink;
+        }
+        &a{
+                max-width: 200px;
+                text-align: center;
+        }
+}

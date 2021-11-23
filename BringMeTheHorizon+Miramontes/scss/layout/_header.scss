@@ -1,0 +1,44 @@
+/* header de todas las paginas */
+header {
+	background-color: $clr-light-blue;
+	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 50%);
+
+	a {
+		font-size: 1em;
+	}
+
+	img {
+		width: $img-width;
+	}
+}
+
+@media (min-width: 425px) {
+	header {
+		header {
+			img {
+				width: $img-width + 3rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 580px) {
+	header {
+		padding: 4rem;
+
+
+		img {
+			width: ($img-width * 2) - 1rem;
+		}
+	}
+}
+
+@media (min-width: 992px){
+	ul {
+		gap: 1.95rem;
+
+		li {
+			font-size: 20px;
+		}
+	}
+}

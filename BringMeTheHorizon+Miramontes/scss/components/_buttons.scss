@@ -1,0 +1,35 @@
+/* estilo de los botones de a */
+.btn {
+	display: inline-block;
+	padding: 0.5em 1.25em;
+	border-radius: 2em;
+	cursor: pointer;
+	letter-spacing: 0.2em;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+
+	&-primary {
+		font-weight: 700;
+	}
+
+	&-line {
+		color: $clr-yellow;
+		text-shadow: 0.1em 0.2em 0.1em rgb(0, 0, 0);
+		background: transparent;
+		&:hover{
+			color: $clr-light-pink;
+		}
+	}
+
+	&-form {
+		background: $clr-yellow;
+		color: $clr-primary;
+		margin: unset;
+		border-radius: unset;
+		padding: 0.25em 1em;
+	}
+}
+
+.btn-primary {
+    @include button-variant($clr-yellow, darken($clr-yellow, 7.5%), $clr-primary, $clr-primary, lighten($clr-yellow, 10%), $clr-light-pink);
+}

@@ -1,0 +1,45 @@
+/* diseño de pagina de contact */
+
+.contact{
+		margin: unset;
+		height: calc(100vh - 52.328px);
+		background: url("http://www.ninefiction.com/wp-content/uploads/2019/03/Bring-Me-The-Horizon-Nine-Fiction-photo-bojanhohnjec-facebook.jpg") no-repeat center/cover;
+		display: grid;
+		place-content: center;
+
+        legend{
+			color: $clr-primary;
+			font-size: 2.5rem;
+            font-weight: 500;
+			line-height: 1.1;
+			text-shadow: 1px 1px 4px #0093e9;
+        }
+
+        input,textarea {
+            width: 200px;
+            font-size: 12px;
+            transition: all .5s;
+            margin-bottom: 1rem;
+            &:focus {
+                width: 250px;
+                font-size: 16px;
+                border:1px solid #000000;
+            }
+        }
+        
+}
+
+@media (min-width: 580px) {
+    .contact{
+        height: calc(100vh - 94.203);
+        legend{
+            font-size: 3.5rem;
+        }
+        input,textarea {
+            width: 300px;
+            &:focus {
+                width: 350px;
+            }
+        }
+    }    
+}

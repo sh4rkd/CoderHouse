@@ -1,0 +1,18 @@
+/* footer de todas las paginas */
+footer {
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	color: $clr-light-pink;
+	text-align: center;
+	font-size: 0.8rem;
+	padding: 20px;
+
+	section {
+		margin-bottom: 20px;
+	}
+
+	img {
+		width: $img-width;
+		height: 40px;
+		padding-bottom: 5px;
+	}
+}

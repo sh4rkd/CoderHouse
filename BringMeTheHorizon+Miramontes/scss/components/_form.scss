@@ -1,0 +1,64 @@
+/* formularios de footer y contact */
+.contact {
+	&-content {
+		&-box {
+			max-width: 12rem;
+			margin-bottom: 1rem;
+			text-align: center;
+		}
+	}
+}
+
+footer {
+	.newsletter {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		gap: 1em;
+
+		form {
+			background: white;
+			width: 100%;
+			max-width: 600px;
+			padding-right: unset;
+			min-height: 50px;
+			border-radius: 0.5em;
+			overflow: hidden;
+			display: flex;
+			flex-flow: column;
+
+			input {
+				flex: 1;
+				border: none;
+				outline: none;
+				padding-right: 1em;
+				color: black;
+				font-size: 1.25rem;
+				padding: 0.8em;
+				text-align: center;
+			}
+
+			button {
+				flex: 0.25;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 1em;
+				padding: 1em;
+			}
+
+			@media (min-width: 500px) {
+				display: flex;
+				flex-flow: row;
+				padding: 0 1em;
+				padding-right: 0;
+
+				input {
+					text-align: left;
+					padding: unset;
+					padding-right: 1em;
+				}
+			}
+		}
+	}
+}
