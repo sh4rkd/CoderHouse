@@ -7,10 +7,10 @@
 		display: grid;
 		place-content: center;
 
-        legend{
+        h1{
 			color: $clr-primary;
 			font-size: 2.5rem;
-            font-weight: 500;
+            font-weight: 700;
 			line-height: 1.1;
 			text-shadow: 1px 1px 4px #0093e9;
         }
@@ -32,7 +32,7 @@
 @media (min-width: 580px) {
     .contact{
         height: calc(100vh - 94.203);
-        legend{
+        h1{
             font-size: 3.5rem;
         }
         input,textarea {
