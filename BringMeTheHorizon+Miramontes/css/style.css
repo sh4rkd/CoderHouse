@@ -3360,7 +3360,7 @@ textarea.form-control-lg {
 .navbar-dark .navbar-nav .nav-link {
   color: #11554ddc; }
   .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-    color: #8BE0D6; }
+    color: #ffffff; }
   .navbar-dark .navbar-nav .nav-link.disabled {
     color: rgba(255, 255, 255, 0.25); }
 
@@ -7929,7 +7929,7 @@ button {
 .contact-content-box {
   max-width: 12rem;
   margin-bottom: 1rem;
-  text-align: center; }
+  text-align: left; }
 
 footer .newsletter {
   display: flex;
@@ -7976,7 +7976,7 @@ footer .newsletter {
 /* el hero de la pagina principal con responsive */
 .hero {
   margin: unset;
-  height: calc(100vh - 52.328px);
+  height: 115vh;
   background: url("../media/images/bring-me-the-horizon.jpg") no-repeat center/cover;
   display: grid;
   place-content: center; }
@@ -7984,7 +7984,8 @@ footer .newsletter {
     color: #cfe6e2;
     font-size: 3rem;
     line-height: 1.1;
-    text-shadow: 3px 3px 7px #000000; }
+    text-shadow: 3px 3px 7px #000000;
+    display: none; }
 
 @media (min-width: 580px) {
   .hero {
@@ -8107,6 +8108,18 @@ body {
     padding: 1em;
     border: 4px solid #ffcf0d; }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+
 .album ol {
   padding-left: 0; }
 
@@ -8114,8 +8127,12 @@ body {
   list-style-position: inside; }
 
 .album-hit {
-  color: #ffcf0d;
-  list-style-image: url("https://api.iconify.design/emojione/glowing-star.svg"); }
+  color: #ffcf0d; }
+  .album-hit img {
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%; }
 
 .news ul {
   display: flex;
@@ -8137,7 +8154,8 @@ body {
     justify-items: center;
     gap: 0;
     grid-auto-flow: row;
-    grid-template-areas: "last-album  next-live" "news        news"; }
+    grid-template-areas: "last-album  next-live"
+ "news        news"; }
   .last-album {
     grid-area: last-album; }
   .next-live {
@@ -8157,7 +8175,7 @@ main.live {
   place-content: center; }
 
 .tour-dates {
-  padding: 3em 0; }
+  padding: 2em 0; }
   .tour-dates ul {
     max-width: 1200px;
     display: flex;
@@ -8183,26 +8201,27 @@ main.live {
         justify-content: center; }
 
 /* diseño de pagina de music */
-#carouselExampleFade img {
-  width: 400px;
-  margin-top: 0;
-  padding-top: unset; }
-
-#carouselExampleFadeh2 {
-  padding-bottom: unset;
-  max-width: 380px;
-  border-bottom: 1px solid #ffcf0d;
-  border-left: 1px solid #e6cfe6; }
-
-#carouselExampleFadea {
-  max-width: 200px;
-  text-align: center; }
+#carouselExampleFade {
+  padding-top: 4rem;
+  padding-bottom: 8rem; }
+  #carouselExampleFade img {
+    width: 400px;
+    margin-top: 0;
+    padding-top: unset; }
+  #carouselExampleFadeh2 {
+    padding-bottom: unset;
+    max-width: 380px;
+    border-bottom: 1px solid #ffcf0d;
+    border-left: 1px solid #e6cfe6; }
+  #carouselExampleFadea {
+    max-width: 200px;
+    text-align: center; }
 
 /* diseño de pagina de updates */
 .updates {
   display: grid;
   place-content: center;
-  padding: 3em 0; }
+  padding: 1em 0; }
   .updates h1, .updates .h1 {
     margin-bottom: 1em; }
   .updates ul {
@@ -8237,15 +8256,8 @@ main.live {
 .contact {
   margin: unset;
   height: calc(100vh - 52.328px);
-  background: url("http://www.ninefiction.com/wp-content/uploads/2019/03/Bring-Me-The-Horizon-Nine-Fiction-photo-bojanhohnjec-facebook.jpg") no-repeat center/cover;
   display: grid;
   place-content: center; }
-  .contact h1, .contact .h1 {
-    color: #0e0e0e;
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.1;
-    text-shadow: 1px 1px 4px #0093e9; }
   .contact input, .contact textarea {
     width: 200px;
     font-size: 12px;
@@ -8265,3 +8277,20 @@ main.live {
       width: 300px; }
       .contact input:focus, .contact textarea:focus {
         width: 350px; } }
+
+@media (min-width: 1020px) {
+  .contact {
+    background: url("../media/images/bmth-concert.jpg") no-repeat center/cover;
+    place-content: unset;
+    place-content: left; }
+    .contact h1, .contact .h1 {
+      text-align: left;
+      margin-left: 25vw; }
+    .contact input, .contact textarea {
+      display: grid;
+      place-content: left;
+      margin-left: 24vw; } }
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+  display:none;
+}

@@ -3,17 +3,8 @@
 .contact{
 		margin: unset;
 		height: calc(100vh - 52.328px);
-		background: url("http://www.ninefiction.com/wp-content/uploads/2019/03/Bring-Me-The-Horizon-Nine-Fiction-photo-bojanhohnjec-facebook.jpg") no-repeat center/cover;
-		display: grid;
+        display: grid;
 		place-content: center;
-
-        h1{
-			color: $clr-primary;
-			font-size: 2.5rem;
-            font-weight: 700;
-			line-height: 1.1;
-			text-shadow: 1px 1px 4px #0093e9;
-        }
 
         input,textarea {
             width: 200px;
@@ -40,6 +31,23 @@
             &:focus {
                 width: 350px;
             }
+        }
+    }    
+}
+
+@media (min-width: 1020px) {
+    .contact{
+		background: url("../media/images/bmth-concert.jpg") no-repeat center/cover;
+        place-content: unset;
+		place-content: left;
+        h1{            
+            text-align: left;
+            margin-left: 25vw;
+        }
+        input,textarea{            
+            display: grid;
+            place-content: left;
+            margin-left: 24vw;
         }
     }    
 }
